@@ -10,7 +10,7 @@ class Menu(models.Model):
 
 
     def __str__(self):
-        return self.name
+         return f'{self.name}'
     
 class Booking(models.Model):
     booking_id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
@@ -19,4 +19,4 @@ class Booking(models.Model):
     inventory = models.IntegerField()
 
     def __str__(self):
-        return self.title
+         return f'{self.title} : {str(self.price)}'
